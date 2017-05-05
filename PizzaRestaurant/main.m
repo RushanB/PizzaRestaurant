@@ -10,6 +10,9 @@
 
 #import "Pizza.h"
 #import "Kitchen.h"
+#import "Manager.h"
+#import "SecondManager.h"
+#import "InputManager.h"
 
 PizzaSize parseSize(NSString* sizeStr){
     if ([sizeStr isEqualToString:@"small"]) {
@@ -31,22 +34,38 @@ int main(int argc, const char * argv[]){
 
     @autoreleasepool {
         
-        NSLog(@"Please pick your pizza size and toppings:");
+        NSLog(@"Welcome to this Pizza Restaurant!");
         
         Kitchen *restaurantKitchen = [Kitchen new];
+        Manager *newManager = [Manager new];
+        SecondManager *secondManager = [SecondManager new];
         
         while (TRUE) {
             // Loop forever
             
-            NSLog(@"> ");
-            char str[100];
-            fgets (str, 100, stdin);
+            NSLog(@"Would you like to speak to a Manager?(yes or no):");
+            NSString *choice = [InputManager input];
             
-            NSString *inputString = [[NSString alloc] initWithUTF8String:str];
-            inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
-            NSLog(@"Input was %@", inputString);
+            if([choice isEqualToString:@"yes"]){
+                NSLog(@"Would you like to speak to Bob or Rob?:");
+                NSString *manager = [InputManager input];
+                if([manager isEqualToString:@"Bob"]){
+                   restaurantKitchen.kitchenDelegate = newManager;
+                }else if([manager isEqualToString:@"Rob"]){
+                    restaurantKitchen.kitchenDelegate = secondManager;
+                }
+
+            }else if([choice isEqualToString:@"no"]){
+                NSLog(@"Okay have a nice day.");
+            }
+        
+        
             
+            NSString *inputString;
+            NSLog(@"Please enter the size of the Pizza followed by the Toppings: %@", inputString);
+            
+            inputString = [InputManager input];
             // Take the first word of the command as the size, and the rest as the toppings
             NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
             
@@ -60,7 +79,6 @@ int main(int argc, const char * argv[]){
             Pizza* newPizza = [restaurantKitchen makePizzaWithSize:size andToppings:toppings];
             NSLog(@"Pizza %@ with size: %ld and toppings:%@", newPizza, size, toppings);
         }
-
     }
     return 0;
 }
