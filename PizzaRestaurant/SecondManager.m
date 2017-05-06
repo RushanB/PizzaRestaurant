@@ -19,6 +19,7 @@
 }
 
 -(void)kitchenDidMakePizza:(Pizza *)pizza{
+    [self.delivery deliverPizza:pizza];
     NSLog(@"Good job!");
 }
 

@@ -12,7 +12,7 @@
 
 -(Pizza *)makePizzaWithSize:(PizzaSize)size andToppings:(NSArray *)toppings{
     return [[Pizza alloc] initWithSize:size andToppings:toppings];
-};
+}
 
 
 @end

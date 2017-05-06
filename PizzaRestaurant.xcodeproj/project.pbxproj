@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31217CA71EBD81B00065A477 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 31217CA61EBD81B00065A477 /* DeliveryService.m */; };
+		31217CAA1EBD81DC0065A477 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 31217CA91EBD81DC0065A477 /* DeliveryCar.m */; };
 		31CB70171EBBB42D00F18567 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CB70161EBBB42D00F18567 /* Pizza.m */; };
 		31D0A5141EBD1A58004ABBA6 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D0A5131EBD1A58004ABBA6 /* Manager.m */; };
 		31D0A5171EBD1B94004ABBA6 /* SecondManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D0A5161EBD1B94004ABBA6 /* SecondManager.m */; };
@@ -29,6 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31217CA51EBD81B00065A477 /* DeliveryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		31217CA61EBD81B00065A477 /* DeliveryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
+		31217CA81EBD81DC0065A477 /* DeliveryCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		31217CA91EBD81DC0065A477 /* DeliveryCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
 		31CB70151EBBB42D00F18567 /* Pizza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		31CB70161EBBB42D00F18567 /* Pizza.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
 		31D0A5111EBD0F31004ABBA6 /* KitchenDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KitchenDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +103,10 @@
 				31CB70161EBBB42D00F18567 /* Pizza.m */,
 				31D0A5181EBD24E1004ABBA6 /* InputManager.h */,
 				31D0A5191EBD24E1004ABBA6 /* InputManager.m */,
+				31217CA51EBD81B00065A477 /* DeliveryService.h */,
+				31217CA61EBD81B00065A477 /* DeliveryService.m */,
+				31217CA81EBD81DC0065A477 /* DeliveryCar.h */,
+				31217CA91EBD81DC0065A477 /* DeliveryCar.m */,
 				6001EC83197B4EC300F97011 /* main.m */,
 				6001EC85197B4EC300F97011 /* Supporting Files */,
 			);
@@ -164,7 +174,9 @@
 			files = (
 				31D0A51A1EBD24E1004ABBA6 /* InputManager.m in Sources */,
 				31CB70171EBBB42D00F18567 /* Pizza.m in Sources */,
+				31217CAA1EBD81DC0065A477 /* DeliveryCar.m in Sources */,
 				31D0A5171EBD1B94004ABBA6 /* SecondManager.m in Sources */,
+				31217CA71EBD81B00065A477 /* DeliveryService.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
 				31D0A5141EBD1A58004ABBA6 /* Manager.m in Sources */,

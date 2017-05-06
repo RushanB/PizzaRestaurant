@@ -10,7 +10,7 @@
 
 @implementation InputManager
 
-+(NSString*) input{
+-(NSString *) getInput{
     char str[100];
     fgets (str, 100, stdin);
     

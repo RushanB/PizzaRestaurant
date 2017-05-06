@@ -12,6 +12,7 @@
 
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings{
     if([toppings containsObject:@"anchovies"]){
+        NSLog(@"Sorry we don't serve anchovies");
         return NO;
     }else{
         return YES;
@@ -21,5 +22,9 @@
     return NO;
 }
 
+-(void)kitchenDidMakePizza:(Pizza *)pizza{
+    SecondManager *makes = [[SecondManager alloc] init];
+    [makes kitchenDidMakePizza:pizza];
+}
 
 @end

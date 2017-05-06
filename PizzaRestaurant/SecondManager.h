@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Kitchen.h"
+#import "DeliveryService.h"
 
 @interface SecondManager : NSObject <KitchenDelegate>
+
+@property (nonatomic) DeliveryService *delivery;
 
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings;
 -(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen;
